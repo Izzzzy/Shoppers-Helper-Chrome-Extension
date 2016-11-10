@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap-3.3.7-dist.css/css/bootstrap.min.css" />
+
+    <!--<link rel="stylesheet" type="text/css" href="/siteindex.cs" />-->
+    <title>Online Sellers' Helper</title>
+    <style>
+        /*html {
+                  min-height: 600px;
+              }*/
+
+        body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 100%;
+            min-width: 500px;
+            height: 200px;
+        }
+
+        #status {
+            /* avoid an excessively wide status text */
+            white-space: pre;
+            text-overflow: ellipsis;
+            /*overflow: hidden;*/
+            /*max-width: 400px;*/
+        }
+    </style>
+
+    <script src="jquery-2.2.4.js"></script>
+    <script src="siteindex.js"></script>
+    <script src="siteextpopup.js"></script>
+</head>
+<body>
+    <div class="container" style="margin:auto; margin-top: 10px;width:98%; max-width: 1400px;">
+
+        <div class="well box2" style="width: 98%;">
+
+            <div class="row" style="text-align: center">
+
+                <input id="search-text" type="text" class="form-control" style="display:inline; width: calc(100% - 110px);overflow:visible;" placeholder="Enter a Search Term, UPC Code, Model #, etc." />
+                <button class="btn btn-primary" id="primary-group-search" style="display:inline;">Multi Search!</button>
+
+            </div>
+            <br />
+            <div id="second-search-div" class="row" style="text-align:center">
+                <!--<input id="second-search-name" type="text" class="form-control" style="display:inline; width: 100px; text-align: center; color: #eea236; " placeholder="2nd Search" onclick="this.setSelectionRange(0, this.value.length)" value="2nd Search" />-->
+                <input id="upc-code" type="text" class="form-control" style="display:inline; width: calc(100% - 110px);" placeholder="Enter a 2nd Search Term, UPC Code, Model #, etc." />
+                <button class="btn btn-warning" id="second-group-search">Multi Search!</button>
+            </div>
+
+            <br />
+            <div id="third-search-div" class="row" style="text-align:center">
+                <!--<input id="third-search-name" type="text" class="form-control" style="display:inline; width: 100px; text-align: center; color: #269abc;" placeholder="3rd Search" onclick="this.setSelectionRange(0, this.value.length)" value="3rd Search" />-->
+                <input id="model-number" type="text" class="form-control" style="display:inline; width: calc(100% - 110px);" placeholder="Enter a 3rd Search Term, UPC Code, Model #, etc." />
+                <button class="btn btn-info" id="third-group-search">Multi Search!</button>
+            </div>
+            <h5>
+                Click "Multi Search!" to open each checked store simultaneously, or click on any single store you would like to search separately.
+            </h5>
+        </div>
+        <div id="store-select" class="row storeSelect" style="margin-top: 10px; margin-left: 20px; margin-right: 20px;">
+            <div class=" row storeselect">
+                <select id="sort-selectbox" class="form-control">
+                    <option id="all-stores-group" value="all">All Stores</option>
+                    <option id="automotive-group" value="auto">Automotive</option>
+                    <option id="baby-group" value="baby">Baby & Toddler</option>
+                    <option id="kitchen-bath-group" value="bed-bath">Bed & Bath</option>
+                    <option id="clothing-group" value="clothing">Clothing</option>
+                    <option id="electronics-group" value="electronics">Electronics</option>
+                    <option id="furniture-group" value="furniture">Furniture</option>
+                    <option id="home-garden-group" value="home-garden">Home & Garden</option>
+                    <option id="sports-outdoors-group" value="sports-outdoors">Sports & Outdoors</option>
+                    <option id="tools-hardware-group" value="tools">Tools</option>
+                    <option id="toys-group" value="toys">Toys</option>
+
+                </select>
+            </div>
+
+
+            <div id="stores-big-div" class="row storeSelect">
+                <table id="stores-table" class="table"></table>
+
+            </div>
+
+        </div>
+        <!--<div class="container" id="bottom-container" style="margin:auto; margin-top: 300px; width: 1400px;">
+        </div>
+
+        <script type="text/javascript" src="//s.skimresources.com/js/99551X1555089.skimlinks.js"></script>-->
+    </div>
+    <script type="text/javascript">
+    var vglnk = { key: '1dae17530df9ea6aad1c242af589131e' };
+
+    (function (d, t) {
+        var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+        s.src = '//cdn.viglink.com/api/vglnk.js';
+        var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+    }(document, 'script'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+
+    "name": "Shopper's Helper",
+    "description": "Helps USER find cheapest products online.",
+    "version": "0.0.0.1",
+
+    "browser_action": {
+        "default_icon": "orangeicon.png",
+        "default_title": "Shopper's Helper",
+        "default_popup": "siteextpopup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [ "jquery-2.2.4.js", "allcontent.js" ],
+            "run_at": "document_end"
+        }
+    ], 
+
+    "background": {  
+    "scripts": ["jquery-2.2.4.js", "siteextbackground.js"],  
+    "persistent":false  
+  },  
+
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+}
