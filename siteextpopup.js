@@ -3,8 +3,39 @@ var identifiers = {};
 var productAndSiteInfo = {};
 //alert('hi');
 document.addEventListener('DOMContentLoaded', function () {
+    $('#stores-big-div').height(
+        $(window).height() - $('#first-part').height() - 7
+    );
+    chrome.tabs.query(
+        { url: '*://*/*', currentWindow: true },
+    function (tabArray) {
+        var myTabs = tabArray.filter(function (item) {
+            return item.url.indexOf('camefromshoppershelper') > -1;
+        });
+        var ids = myTabs.map(function (v) {
+            return v.id;
+        });
+        if (ids.length > 0) {
+            //alert('hi');
+            $('body').prepend('<button id="x-out-tabs" class="close btn btn-danger btn-xs"style="margin-right:30px;">&times;</button>');
+            $('#stores-big-div').height(
+                $(window).height() - $('#first-part').height() - 7
+            );
+        }
+        $('body #x-out-tabs').click(function () {
+            chrome.tabs.remove(ids, function () { });
+        });
+        //chrome.tabs.remove(ids, function () { });
+    }
+);
+
+
+    //chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
 
     chrome.tabs.executeScript(null, { file: "allcontent.js" });
+    //    chrome.tabs.executeScript(tabs[0].id, { file: "allcontent.js" });
+
+    //});
     //    chrome.tabs.query({ 'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT },
     //   function (tabs) {
     //       if (url_domain(tabs[0].url).indexOf('amazon.com') > -1) {
@@ -129,6 +160,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     setUpcLinks();
                     $('.btn-second-search.btn-warning.btn-xs').html(identifiers[1].searchName);
                     $('#second-search-div').show();
+                    //alert($('#first-part').height());
+                    $('#stores-big-div').height(
+    $(window).height() - $('#first-part').height() - 7
+);
                     $('.btn-second-search.btn-warning.btn-xs').show();
                 }
                 if (identifiers[2] !== "undefined") {
@@ -138,6 +173,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     setModelNumberLinks();
                     $('.btn-third-search.btn-info.btn-xs').html(identifiers[2].searchName);
                     $('#third-search-div').show();
+                    $('#stores-big-div').height(
+    $(window).height() - $('#first-part').height() - 7
+);
                     $('.btn-third-search.btn-info.btn-xs').show();
                 }
 
@@ -231,6 +269,8 @@ function setMainLinks() {
             }
             if ($this.closest('.store-div').attr('id') === 'staples-div') {
                 $this.attr("href", _href + $('#search-text').val().trim().replace(' ', '+').replace('&', '%26') + '/directory_' + $('#search-text').val().trim().replace(' ', '%2520'));
+            } else if ($this.closest('.store-div').attr('id') === 'jcpenny-div') {
+                $this.attr("href", _href + $('#search-text').val().trim().replace('&', '%26') + '?Ntt=' + $('#search-text').val().trim());
             } else {
                 $this.attr("href", _href + $('#search-text').val().replace('&', '%26') + appendThis);
             }
@@ -240,7 +280,8 @@ function setMainLinks() {
 
         $('#amazon-link').attr('href', 'http://www.amazon.com');
         $('#ebay-link').attr('href', 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com');
-        $('#target-link').attr('href', 'http://goto.target.com/c/325851/81938/2092');
+        //$('#target-link').attr('href', 'http://goto.target.com/c/325851/81938/2092');
+        $('#target-link').attr('href', 'http://www.target.com');
         $('#bestbuy-link').attr('href', 'http://click.linksynergy.com/fs-bin/click?id=m*/k*5ti41w&subid=&offerid=448595.1&type=10&tmpid=13128&RD_PARM1=http%3A%2F%2Fwww.bestbuy.com');
         $('#kmart-link').attr('href', 'http://www.kmart.com');
         $('#walmart-link').attr('href', 'http://www.walmart.com');
@@ -277,6 +318,12 @@ function setMainLinks() {
         $('#childrensplace-link').attr('href', 'http://www.childrensplace.com');
         $('#adorama-link').attr('href', 'http://www.adorama.com');
         $('#gilt-link').attr('href', 'http://www.gilt.com');
+        $('#nordstromrack-link').attr('href', 'http://www.nordstromrack.com');
+        $('#neimanmarcus-link').attr('href', 'http://www.neimanmarcus.com');
+        $('#lastcall-link').attr('href', 'http://www.lastcall.com');
+        $('#papermart-link').attr('href', 'http://www.papermart.com');
+        $('#saksfifthavenue-link').attr('href', 'http://www.saksfifthavenue.com');
+        $('#saksoff5th-link').attr('href', 'http://www.saksoff5th.com');
 
     }
 };
@@ -293,6 +340,8 @@ function setUpcLinks() {
             }
             if ($this.closest('.store-div').attr('id') === 'staples-div') {
                 $this.attr("href", _href + $('#upc-code').val().trim().replace(' ', '+').replace('&', '%26') + '/directory_' + $('#upc-code').val().trim().replace(' ', '%2520'));
+            } else if ($this.closest('.store-div').attr('id') === 'jcpenny-div') {
+                $this.attr("href", _href + $('#upc-code').val().trim().replace('&', '%26') + '?Ntt=' + $('#upc-code').val().trim());
             } else {
                 $this.attr("href", _href + $('#upc-code').val().replace('&', '%26') + appendThis);
             }
@@ -305,7 +354,7 @@ function setModelNumberLinks() {
     if ($('#model-number').val().length) {
 
         if ($('#model-number').val().length) {
-            $(".model-link").each(function() {
+            $(".model-link").each(function () {
                 var $this = $(this);
                 var _href = $this.closest('.store-div').data("search-link");
                 var appendThis = '';
@@ -314,6 +363,8 @@ function setModelNumberLinks() {
                 }
                 if ($this.closest('.store-div').attr('id') === 'staples-div') {
                     $this.attr("href", _href + $('#model-number').val().trim().replace(' ', '+').replace('&', '%26') + '/directory_' + $('#model-number').val().trim().replace(' ', '%2520'));
+                } else if ($this.closest('.store-div').attr('id') === 'jcpenny-div') {
+                    $this.attr("href", _href + $('#model-number').val().trim().replace('&', '%26') + '?Ntt=' + $('#model-number').val().trim());
                 } else {
                     $this.attr("href", _href + $('#model-number').val().replace('&', '%26') + appendThis);
                 }

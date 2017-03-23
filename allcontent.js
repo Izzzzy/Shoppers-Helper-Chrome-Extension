@@ -260,6 +260,34 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
     //productName = $('#sku-title h1').html();
     //modelNumber = $('#model-value').text();
 
+} else if (currentPage.indexOf('bhphotovideo.com') > -1 && $('.pProductName.bold.c31.js-main-product-name').length) {
+
+    productAndSiteInfo = {};
+    productAndSiteInfo = {
+        siteName: 'bhphotovideo.com',
+        url: document.location.href,
+        price: $('')
+        //price: $('#purchase-cluster .price-and-value .price').text()
+    };
+
+    if ($('.pProductName.bold.c31.js-main-product-name').length) {
+        identifiers.push({
+            searchName: 'Product',
+            searchTerm: $('.pProductName.bold.c31.js-main-product-name').text().replace(/\s\s+/g, ' ').trim()
+        });
+    }
+    if ($('span:contains("UPC:")').length) {
+        identifiers.push({
+            searchName: 'UPC',
+            searchTerm: $('span:contains("UPC:")').text().replace('UPC:', '').trim()
+        });
+    }
+    if ($('.fs16.c28.mfr-number').length) {
+        identifiers.push({
+            searchName: 'Model#',
+            searchTerm: $('.fs16.c28.mfr-number').text().replace('MFR', '').replace('#', '').trim()
+        });
+    }
 } else if (currentPage.indexOf('bloomingdales.com') > -1 && $('#productTitle').length) { // 
 
     productAndSiteInfo = {};
@@ -282,6 +310,34 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
     //        searchTerm: $('')
     //    });
     //} 
+    //if ($('').length) {
+    //    identifiers.push({
+    //        searchName: '',
+    //        searchTerm: $('')
+    //    });
+    //} 
+} else if (currentPage.indexOf('buydig.com') > -1 && $('#lblProdName').length) {
+
+    productAndSiteInfo = {};
+    productAndSiteInfo = {
+        siteName: 'buydig.com',
+        url: document.location.href,
+        price: $('')
+        //price: $('#purchase-cluster .price-and-value .price').text()
+    };
+
+    if ($('#lblProdName').length) {
+        identifiers.push({
+            searchName: 'Product',
+            searchTerm: $('#lblProdName').text().trim()
+        });
+    }
+    if ($('#lblMfgPartNo').length) {
+        identifiers.push({
+            searchName: 'Model#',
+            searchTerm: $('#lblMfgPartNo').text().trim()
+        });
+    }
     //if ($('').length) {
     //    identifiers.push({
     //        searchName: '',
@@ -519,6 +575,34 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
     //        searchTerm: $('')
     //    });
     //} 
+} else if (currentPage.indexOf('kohls.com') > -1 && $('.pdp-main-container .pdp-product-title').length) {
+
+    productAndSiteInfo = {};
+    productAndSiteInfo = {
+        siteName: 'kohls.com',
+        url: document.location.href,
+        price: $('')
+        //price: $('#purchase-cluster .price-and-value .price').text()
+    };
+
+    if ($('.pdp-main-container .pdp-product-title').length) {
+        identifiers.push({
+            searchName: 'Product',
+            searchTerm: $('.pdp-main-container .pdp-product-title').text().trim()
+        });
+    }
+    if ($('script:contains("skuUpcCode")').length) {
+        identifiers.push({
+            searchName: 'UPC',
+            searchTerm: $('script:contains("skuUpcCode")').html().substring($('script:contains("skuUpcCode")').html().lastIndexOf('skuUpcCode') + 10, $('script:contains("skuUpcCode")').html().lastIndexOf('"inventoryStatus"')).replace('"', '').replace('"', '').replace('"', '').replace(':', '').replace(',', '').trim()
+        });
+    }
+    if ($('#accordion1000 li:contains("Model no")').length) {
+        identifiers.push({
+            searchName: 'Model#',
+            searchTerm: $('#accordion1000 li:contains("Model no")').text().replace('Model no.', '').trim()
+        });
+    }
 } else if (currentPage.indexOf('lowes.com') > -1 && $('.pd-title.grid-100 h1.h3').length) {
 
     productAndSiteInfo = {};
@@ -596,14 +680,12 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
             searchTerm: $('#grpDescrip_h').text().trim()
         });
     }
-
-    //needs work
     if ($('dt:contains("Model")').length) {
         identifiers.push({
             searchName: 'Model#',
             searchTerm: $('dt:contains("Model")').next('dd').html().trim()
         });
-    } 
+    }
     //if ($('').length) {
     //    identifiers.push({
     //        searchName: '',
@@ -772,6 +854,34 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
         });
     }
 
+} else if (currentPage.indexOf('techrabbit.com') > -1 && $('.product-shop-content .product-name').length) {
+
+    productAndSiteInfo = {};
+    productAndSiteInfo = {
+        siteName: 'techrabbit.com',
+        url: document.location.href,
+        price: $('')
+        //price: $('#purchase-cluster .price-and-value .price').text()
+    };
+
+    if ($('.product-shop-content .product-name').length) {
+        identifiers.push({
+            searchName: 'Product',
+            searchTerm: $('.product-shop-content .product-name').text().trim()
+        });
+    }
+    if ($('th:contains("UPC")').length) {
+        identifiers.push({
+            searchName: 'UPC',
+            searchTerm: $('th:contains("UPC")').next('td').text().trim()
+        });
+    }
+    if ($('th:contains("MFGR Sku")').length) {
+        identifiers.push({
+            searchName: 'Model#',
+            searchTerm: $('th:contains("MFGR Sku")').next('td').text().trim()
+        });
+    }
 } else if (currentPage.indexOf('toysrus.com') > -1) {
 
     productAndSiteInfo = {};
@@ -800,6 +910,11 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
             searchName: 'Product',
             searchTerm: $('.prod-title-section h1 span').text().trim()
         });
+    } else if ($('.prod-ProductTitle.no-margin.heading-b').length) {
+        identifiers.push({
+            searchName: 'Product',
+            searchTerm: $('.prod-ProductTitle.no-margin.heading-b').text().trim()
+        });
     }
     if ($('meta[property="og:upc"]').length) {
         identifiers.push({
@@ -811,6 +926,11 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
         identifiers.push({
             searchName: 'Model#',
             searchTerm: $('tr td:contains("Model:")').next('td').text().trim()
+        });
+    } else if ($('meta[itemprop="model"]').length) {
+        identifiers.push({
+            searchName: 'Model#',
+            searchTerm: $('meta[itemprop="model"]').attr('content')
         });
     }
 }
