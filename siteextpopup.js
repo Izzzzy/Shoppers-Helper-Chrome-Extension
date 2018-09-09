@@ -324,6 +324,7 @@ function setMainLinks() {
         $('#papermart-link').attr('href', 'http://www.papermart.com');
         $('#saksfifthavenue-link').attr('href', 'http://www.saksfifthavenue.com');
         $('#saksoff5th-link').attr('href', 'http://www.saksoff5th.com');
+        $('#homeclick-link').attr('href', 'http://www.homeclick.com');
 
     }
 };

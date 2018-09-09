@@ -156,6 +156,7 @@ function setMainLinks() {
         $('#papermart-link').attr('href', 'http://www.papermart.com');
         $('#saksfifthavenue-link').attr('href', 'http://www.saksfifthavenue.com');
         $('#saksoff5th-link').attr('href', 'http://www.saksoff5th.com');
+        $('#homeclick-link').attr('href', 'http://www.homeclick.com');
 
     }
 };
@@ -201,3 +202,20 @@ function setModelNumberLinks() {
         }
     }
 }
+
+
+$(function () {
+    $("#buildButton").click(function () {
+        $("#url").val() ? ($("#buildUrlFormGroup").removeClass("has-error"), $("#url").prop("disabled", !0), $(this).text("Building...").prop("disabled", !0), $("#buildUrlAddress").text($("#url").val() + "..."), $("#buildurl").show("fast", function () {
+            $.ajax({ cache: !1, data: { shorten: $("#shorten").is(":checked"), campaignName: b, url: $("#url").val() }, url: "/publisher/site/buildurl", timeout: 15E3 }).done(function (a) {
+                a = JSON.parse(a); $("#url").prop("disabled", !1).focus(); if (a.url) {
+                    var d =
+                        ""; 1 != a["short"] || a.url.match(/bit\.ly/g) || (d = '<strong>Note:</strong> This link was wrapped, but there was a problem shortening it.You can use this link, or try shortening it yourself with <a href="http://bit.ly/">Bit.ly.</a>'); $("#buildurl").html('<div style="word-wrap: break-word" class="alert alert-success fade in"><h4 style="margin-bottom:5px;"><strong>Your VigLink Anywhere link:</strong></h4><p><a href="' + a.url + '">' + a.url + "</a></p>" + d + "</div>")
+                } else $("#buildurl").html('<div style="word-wrap: break-word" class="alert alert-danger fade in"><h4 style="margin-bottom:5px;">Error!</h4>' +
+                    (a.errors ? a.errors : "An error occurred, please try again later.") + "</div>"); window.location = "#buildurl"; $("#buildButton").prop("disabled", !1); $("#buildButton").text("Build!")
+            }).fail(function () { toastr.warning("An error has occurred.</br>Please try again."); $("#buildButton").prop("disabled", !1); $("#buildButton").text("Build!"); $("#url").prop("disabled", !1).focus() })
+        })) : ($("#buildUrlFormGroup").addClass("has-error"), $("#url").prop("placeholder", "Please enter a URL, starting with http://"))
+    }); toastr.options =
+        { closeButton: !0, debug: !1, newestOnTop: !1, progressBar: !0, positionClass: "toast-top-center", preventDuplicates: !0, onclick: null, showDuration: "300", hideDuration: "1000", timeOut: "3000", extendedTimeOut: "1000", showEasing: "swing", hideEasing: "linear", showMethod: "fadeIn", hideMethod: "fadeOut" }; $(".dropdown-menu-sites").recyclerDropdown({ onMenuClick: function (a, d) { var c = $(d.find("label")[0]), b = c.data("value"); c = c.data("label"); b && c && (window.location.href = "/publisher/anywhere/siteid/" + b + "/site/" + c) } }); vglnk.params.siteid &&
+            $(".dropdown-menu-sites").recyclerDropdown("setSelectedValues", vglnk.params.siteid); var b, e = setInterval(function () { var a = $(".dropdown-menu-sites").recyclerDropdown("getSelectedData"); a[0][0] && (b = a[0][0].rawName, $("#bmkt-code").attr("href", $("#bmkt-code").attr("href").replace("API_KEY", a[0][0].apiKey)), $("#bmkt-code").attr("href", $("#bmkt-code").attr("href").replace("SITE_ID", a[0][0].campaignId)), clearInterval(e)) }, 750)
+});

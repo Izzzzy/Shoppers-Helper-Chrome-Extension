@@ -7,7 +7,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out
         //not sure but left in
         divId: 'amazon-div',
-        dataSearchLink: 'https://www.amazon.com/s/?field-keywords=',
+        dataSearchLink: 'https://www.amazon.com/s/?camefromshoppershelper&tag=ymwsbannerpage&field-keywords=',
         dataAppendToSearchLink: '',
         linkId: 'amazon-link',
         nameForButton: 'AMAZON',
@@ -21,7 +21,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out
         //not sure but left in
         divId: 'ebay-div',
-        dataSearchLink: 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3D',
+        dataSearchLink: 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?camefromshoppershelper&ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3D',
         //dataSearchLink: 'http://www.ebay.com%2Fsch%2Fi.html%3F_nkw%3D',
         dataAppendToSearchLink: '',
         linkId: 'ebay-link',
@@ -37,7 +37,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out
         //not sure but left in
         divId: 'jet-div',
-        dataSearchLink: 'https://jet.com/search?term=',
+        dataSearchLink: 'https://jet.com/search?camefromshoppershelper&term=',
         dataAppendToSearchLink: '',
         linkId: 'jet-link',
         nameForButton: 'JET',
@@ -65,7 +65,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out outlet
         //not sure but left in
         divId: 'target-div',
-        dataSearchLink: 'http://goto.target.com/c/325851/81938/2092?u=http%3A%2F%2Fwww.target.com%2Fs%3FsearchTerm%3D',
+        dataSearchLink: 'http://goto.target.com/c/325851/81938/2092?camefromshoppershelper&u=http%3A%2F%2Fwww.target.com%2Fs%3FsearchTerm%3D',
         //dataSearchLink: 'http://www.target.com%2Fs%3FsearchTerm%3D',
         dataAppendToSearchLink: '',
         linkId: 'target-link',
@@ -81,7 +81,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out
         //not sure but left in
         divId: 'walmart-div',
-        dataSearchLink: 'https://www.walmart.com/search/?query=',
+        dataSearchLink: 'https://www.walmart.com/search/?camefromshoppershelper&query=',
         dataAppendToSearchLink: '',
         linkId: 'walmart-link',
         nameForButton: 'WALMART',
@@ -95,7 +95,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out
         //not sure but left in
         divId: 'adorama-div',
-        dataSearchLink: 'http://www.adorama.com/searchsite/default.aspx?searchinfo=',
+        dataSearchLink: 'http://www.adorama.com/searchsite/default.aspx?camefromshoppershelper&searchinfo=',
         dataAppendToSearchLink: '',
         linkId: 'adorama-link',
         nameForButton: 'ADORAMA',
@@ -109,7 +109,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out
         //not sure but left in
         divId: 'advanceautoparts-div',
-        //dataSearchLink: 'http://shop.advanceautoparts.com/web/PartSearchCmd?storeId=10151&catalogId=10051&pageId=partTypeList&suggestion=&actionSrc=Form&langId=-1&vehicleIdSearch=-1&searchTerm=',
+        //dataSearchLink: 'http://shop.advanceautoparts.com/web/PartSearchCmd?camefromshoppershelper&storeId=10151&catalogId=10051&pageId=partTypeList&suggestion=&actionSrc=Form&langId=-1&vehicleIdSearch=-1&searchTerm=',
         dataSearchLink: 'shop.advanceautoparts.com%2Fweb%2FPartSearchCmd%3FstoreId%3D10151%26catalogId%3D10001%26pageId%3DpartTypeList%26suggestion%3D%26actionSrc%3DForm%26langId%3D-1%26vehicleIdSearch%3D-1%26searchTerm%3D',
         dataAppendToSearchLink: '&searchedFrom=header',
         linkId: 'advanceautoparts-link',
@@ -124,7 +124,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out
         //not sure but left in
         divId: 'autozone-div',
-        dataSearchLink: 'http://www.autozone.com/searchresult?searchText=',
+        dataSearchLink: 'http://www.autozone.com/searchresult?camefromshoppershelper&searchText=',
         dataAppendToSearchLink: '',
         linkId: 'autozone-link',
         nameForButton: 'AUTO ZONE',
@@ -152,12 +152,15 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out furniture-and-decor kids outlet photo
         //not sure but left in
         divId: 'bestbuy-div',
-        dataSearchLink: 'http://click.linksynergy.com/fs-bin/click?id=m*/k*5ti41w&subid=&offerid=448595.1&type=10&tmpid=13127&RD_PARM1=http%253A%252F%252Fwww.bestbuy.com%252Fsite%252Fsearchpage.jsp%253Fst%253D',
+        //dataSearchLink: 'http://click.linksynergy.com/fs-bin/click?camefromshoppershelper&id=m*/k*5ti41w&subid=&offerid=448595.1&type=10&tmpid=13127&RD_PARM1=http%253A%252F%252Fwww.bestbuy.com%252Fsite%252Fsearchpage.jsp%253Fst%253D',
+
+        dataSearchLink: 'https://www.bestbuy.com/site/searchpage.jsp?st=',
 
         //for viglink redirect:
         //dataSearchLink: 'http://www.bestbuy.com%2Fsite%2Fsearchpage.jsp%3Fst%3D',
         //dataAppendToSearchLink: '%26_dyncharset%3DUTF-8%26id%3Dpcat17071%26type%3Dpage%26sc%3DGlobal%26cp%3D1%26nrp%3D%26sp%3D%26qp%3D%26list%3Dn%26af%3Dtrue%26iht%3Dy%26usc%3DAll%2BCategories%26ks%3D960%26keys%3Dkeys',//%2526_dyncharset%253DUTF-8%2526id%253Dpcat17071%2526type%253Dpage%2526sc%253DGlobal%2526cp%253D1%2526nrp%253D%2526sp%253D%2526qp%253D%2526list%253Dn%2526af%253Dtrue%2526iht%253Dy%2526usc%253DAll%252BCategories%2526ks%253D960%2526keys%253Dkeys',
-        dataAppendToSearchLink: '%2526_dyncharset%253DUTF-8%2526id%253Dpcat17071%2526type%253Dpage%2526sc%253DGlobal%2526cp%253D1%2526nrp%253D%2526sp%253D%2526qp%253D%2526list%253Dn%2526af%253Dtrue%2526iht%253Dy%2526usc%253DAll%252BCategories%2526ks%253D960%2526keys%253Dkeys',
+        
+        //dataAppendToSearchLink: '%2526_dyncharset%253DUTF-8%2526id%253Dpcat17071%2526type%253Dpage%2526sc%253DGlobal%2526cp%253D1%2526nrp%253D%2526sp%253D%2526qp%253D%2526list%253Dn%2526af%253Dtrue%2526iht%253Dy%2526usc%253DAll%252BCategories%2526ks%253D960%2526keys%253Dkeys',
            linkId: 'bestbuy-link',
            nameForButton: 'BEST BUY',
            href: 'http://click.linksynergy.com/fs-bin/click?id=m*/k*5ti41w&subid=&offerid=448595.1&type=10&tmpid=13128&RD_PARM1=http%3A%2F%2Fwww.bestbuy.com',
@@ -171,7 +174,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out  baby-toddler books department-stores health-beauty jewelry-watches kids outlet
            //not sure but left in
            divId: 'bloomingdales-div',
-           dataSearchLink: 'http://www1.bloomingdales.com/shop/search?keyword=',
+           dataSearchLink: 'http://www1.bloomingdales.com/shop/search?camefromshoppershelper&keyword=',
            dataAppendToSearchLink: '',
            linkId: 'bloomingdales-link',
            nameForButton: "BLOOMINGDALE'S",
@@ -199,7 +202,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out auto outlet photo
            //not sure but left in
            divId: 'childrensplace-div',
-           //dataSearchLink: 'http://www.childrensplace.com/shop/SearchDisplay?storeId=10151&catalogId=10551&langId=-1&pageSize=100&beginIndex=0&searchSource=Q&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&pageView=image&custSrch=search&searchTerm=',
+           //dataSearchLink: 'http://www.childrensplace.com/shop/SearchDisplay?camefromshoppershelper&storeId=10151&catalogId=10551&langId=-1&pageSize=100&beginIndex=0&searchSource=Q&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&pageView=image&custSrch=search&searchTerm=',
            dataSearchLink: 'www.childrensplace.com%2Fshop%2FSearchDisplay%3FstoreId%3D10151%26catalogId%3D10551%26langId%3D-1%26pageSize%3D100%26beginIndex%3D0%26searchSource%3DQ%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26pageView%3Dimage%26custSrch%3Dsearch%26searchTerm%3D',
            dataAppendToSearchLink: '',
            linkId: 'childrensplace-link',
@@ -214,7 +217,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out 
            //not sure but left in
            divId: 'fryselectronics-div',
-           //dataSearchLink: 'http://frys.com/search?search_type=regular&sqxts=1&cat=&query_string=',
+           //dataSearchLink: 'http://frys.com/search?camefromshoppershelper&search_type=regular&sqxts=1&cat=&query_string=',
            dataSearchLink: 'http://frys.com%2Fsearch%3Fsearch_type%3Dregular%26sqxts%3D1%26cat%3D%26query_string%3D',
            dataAppendToSearchLink: '',
            linkId: 'fryselectronics-link',
@@ -229,7 +232,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out books department-stores outlet kids
            //not sure but left in
            divId: 'gap-div',
-           dataSearchLink: 'http://www.gap.com/browse/search.do?searchText=',
+           dataSearchLink: 'http://www.gap.com/browse/search.do?camefromshoppershelper&searchText=',
            dataAppendToSearchLink: '',
            linkId: 'gap-link',
            nameForButton: 'GAP',
@@ -243,7 +246,7 @@ $(function () { // setting the array of stores with the properties
             //not sure but took out department-stores outlet sports-outdoors
             //not sure but left in
             divId: 'gilt-div',
-            dataSearchLink: 'https://www.gilt.com/search?q.query=',
+            dataSearchLink: 'https://www.gilt.com/search?camefromshoppershelper&q.query=',
             dataAppendToSearchLink: '',
             linkId: 'gilt-link',
             nameForButton: 'GILT',
@@ -257,7 +260,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out department-stores auto
            //not sure but left in 
            divId: 'groupon-div',
-           dataSearchLink: 'https://www.groupon.com/browse/?query=',
+           dataSearchLink: 'https://www.groupon.com/browse/?camefromshoppershelper&query=',
            dataAppendToSearchLink: '&locale=en_US',
            linkId: 'groupon-link',
            nameForButton: 'GROUPON',
@@ -271,7 +274,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out department-stores kids outlet
            //not sure but left in
            divId: 'guess-div',
-           dataSearchLink: 'http://shop.guess.com/en/Catalog/Search/?criteria=',
+           dataSearchLink: 'http://shop.guess.com/en/Catalog/Search/?camefromshoppershelper&criteria=',
            dataAppendToSearchLink: '',
            linkId: 'guess-link',
            nameForButton: 'GUESS',
@@ -285,7 +288,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out auto department-stores health-beauty outlet 
            //not sure but left in furniture-and-decor sports-outdoors
            divId: 'hdsupplysolutions-div',
-           //dataSearchLink: 'http://hdsupplysolutions.com/shop/SearchDisplay?storeId=10051&catalogId=10054&langId=-1&pageSize=24&beginIndex=0&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&searchType=1002&searchTerm=',
+           //dataSearchLink: 'http://hdsupplysolutions.com/shop/SearchDisplay?camefromshoppershelper&storeId=10051&catalogId=10054&langId=-1&pageSize=24&beginIndex=0&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&searchType=1002&searchTerm=',
            dataSearchLink: 'hdsupplysolutions.com%2Fshop%2FSearchDisplay%3FstoreId%3D10051%26catalogId%3D10054%26langId%3D-1%26pageSize%3D24%26beginIndex%3D0%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26searchSource%3DQ%26pageView%3D%26searchType%3D1002%26searchTerm%3D',
            dataAppendToSearchLink: '',
            linkId: 'hdsupplysolutions-link',
@@ -293,6 +296,20 @@ $(function () { // setting the array of stores with the properties
            href: 'http://www.hdsupplysolutions.com',
            upcAId: 'upc-hdsupplysolutions-link',
            modelAId: 'model-number-hdsupplysolutions-link'
+       },
+       {
+           categoryClasses: 'all furniture-and-decor home-garden kitchen-bath sports-outdoors tools-hardware',
+           //took out baby-toddler books cell-phones-accessories clothing computers electronics-and-office groceries jewelry-watches kids photo
+           //not sure but took out auto department-stores health-beauty outlet 
+           //not sure but left in furniture-and-decor sports-outdoors
+           divId: 'homeclick-div',
+           dataSearchLink: 'http://www.homeclick.com/web/search/search.aspx?camefromshoppershelper&Ntt=',
+           dataAppendToSearchLink: '',
+           linkId: 'hdsupplysolutions-link',
+           nameForButton: "HOMECLICK",
+           href: 'http://www.homeclick.com',
+           upcAId: 'upc-homeclick-link',
+           modelAId: 'model-number-homeclick-link'
        },
        {
            categoryClasses: 'all furniture-and-decor home-garden kitchen-bath sports-outdoors tools-hardware',
@@ -329,7 +346,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but left in kitchen-bath
 
            divId: 'kohls-div',
-           dataSearchLink: 'http://www.kohls.com/search.jsp?search=',
+           dataSearchLink: 'http://www.kohls.com/search.jsp?camefromshoppershelper&search=',
            dataAppendToSearchLink: '',
            linkId: 'kohls-link',
            nameForButton: "KOHL'S",
@@ -343,7 +360,7 @@ $(function () { // setting the array of stores with the properties
             //not sure but took out department-stores furniture-and-decor health-beauty home-garden jewelry-watches
             //not sure but left in
             divId: 'lastcall-div',
-            //dataSearchLink: 'http://www.lastcall.com/search.jsp?N=0&Ntt=',
+            //dataSearchLink: 'http://www.lastcall.com/search.jsp?camefromshoppershelper&N=0&Ntt=',
             dataSearchLink: 'www.lastcall.com%2Fsearch.jsp%3FN%3D0%26Ntt%3D',
             dataAppendToSearchLink: '',
             linkId: 'lastcall-link',
@@ -358,7 +375,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out auto department-stores health-beauty outlet 
            //not sure but left in furniture-and-decor sports-outdoors
            divId: 'lowes-div',
-           dataSearchLink: 'https://www.lowes.com/search?searchTerm=',
+           dataSearchLink: 'https://www.lowes.com/search?camefromshoppershelper&searchTerm=',
            dataAppendToSearchLink: '',
            linkId: 'lowes-link',
            nameForButton: "LOWE'S",
@@ -386,7 +403,7 @@ $(function () { // setting the array of stores with the properties
             //not sure but took out baby-toddler department-stores furniture-and-decor health-beauty home-garden jewelry-watches kids kitchen-bath outlet
             //not sure but left in
             divId: 'neimanmarcus-div',
-            //dataSearchLink: 'http://www.neimanmarcus.com/search.jsp?from=brSearch&responsive=true&request_type=search&search_type=keyword&q=',
+            //dataSearchLink: 'http://www.neimanmarcus.com/search.jsp?camefromshoppershelper&from=brSearch&responsive=true&request_type=search&search_type=keyword&q=',
             dataSearchLink: 'www.neimanmarcus.com%2Fsearch.jsp%3Ffrom%3DbrSearch%26responsive%3Dtrue%26request_type%3Dsearch%26search_type%3Dkeyword%26q%3D',
             dataAppendToSearchLink: '&l=',
             linkId: 'neimanmarcus-link',
@@ -401,7 +418,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out department-stores furniture-and-decor outlet
            //not sure but left in photo
            divId: 'newegg-div',
-           //dataSearchLink: 'http://www.newegg.com/Product/ProductList.aspx?Submit=ENE&DEPA=0&Order=BESTMATCH&Description=',
+           //dataSearchLink: 'http://www.newegg.com/Product/ProductList.aspx?camefromshoppershelper&Submit=ENE&DEPA=0&Order=BESTMATCH&Description=',
            dataSearchLink: 'www.newegg.com%2FProduct%2FProductList.aspx%3FSubmit%3DENE%26DEPA%3D0%26Order%3DBESTMATCH%26Description%3D',
            dataAppendToSearchLink: '',
            linkId: 'newegg-link',
@@ -416,7 +433,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out baby-toddler department-stores furniture-and-decor health-beauty home-garden jewelry-watches kids kitchen-bath outlet
            //not sure but left in
            divId: 'nordstrom-div',
-           //dataSearchLink: 'http://shop.nordstrom.com/sr?origin=keywordsearch&contextualcategoryid=0&keyword=',
+           //dataSearchLink: 'http://shop.nordstrom.com/sr?camefromshoppershelper&origin=keywordsearch&contextualcategoryid=0&keyword=',
            dataSearchLink: 'shop.nordstrom.com%2Fsr%3Forigin%3Dkeywordsearch%26keyword%3D',
            dataAppendToSearchLink: '',
            linkId: 'nordstrom-link',
@@ -431,7 +448,7 @@ $(function () { // setting the array of stores with the properties
             //not sure but took out department-stores furniture-and-decor health-beauty home-garden jewelry-watches
             //not sure but left in
             divId: 'nordstromrack-div',
-            dataSearchLink: 'https://www.nordstromrack.com/shop/search?query=',
+            dataSearchLink: 'https://www.nordstromrack.com/shop/search?camefromshoppershelper&query=',
             dataAppendToSearchLink: '',
             linkId: 'nordstromrack-link',
             nameForButton: 'NORDSTROM RACK',
@@ -445,7 +462,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out department-stores outlet
            //not sure but left in furniture-and-decor photo
            divId: 'officedepot-div',
-           dataSearchLink: 'http://www.officedepot.com/catalog/search.do?Ntt=',
+           dataSearchLink: 'http://www.officedepot.com/catalog/search.do?camefromshoppershelper&Ntt=',
            dataAppendToSearchLink: '',
            linkId: 'officedepot-link',
            nameForButton: 'OFFICE DEPOT',
@@ -459,7 +476,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out books department-stores outlet kids
            //not sure but left in
            divId: 'oldnavy-div',
-           dataSearchLink: 'http://oldnavy.gap.com/browse/search.do?searchText=',
+           dataSearchLink: 'http://oldnavy.gap.com/browse/search.do?camefromshoppershelper&searchText=',
            dataAppendToSearchLink: '',
            linkId: 'oldnavy-link',
            nameForButton: 'OLD NAVY',
@@ -473,7 +490,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out department-stores photo
            //not sure but left in
            divId: 'oshkosh-div',
-           dataSearchLink: 'http://www.oshkosh.com/on/demandware.store/Sites-Carters-Site/default/Search-Show?q=',
+           dataSearchLink: 'http://www.oshkosh.com/on/demandware.store/Sites-Carters-Site/default/Search-Show?camefromshoppershelper&q=',
            dataAppendToSearchLink: '',
            linkId: 'oshkosh-link',
            nameForButton: "OSH KOSH B'GOSH",
@@ -487,7 +504,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out department-stores photo
            //not sure but left in
            divId: 'overstock-div',
-           dataSearchLink: 'https://www.overstock.com/search?keywords=',
+           dataSearchLink: 'https://www.overstock.com/search?camefromshoppershelper&keywords=',
            dataAppendToSearchLink: '',
            linkId: 'overstock-link',
            nameForButton: 'OVERSTOCK',
@@ -501,7 +518,7 @@ $(function () { // setting the array of stores with the properties
             //not sure but took outauto baby-toddler books cell-phones-accessories clothing computers department-stores electronics-and-office furniture-and-decor groceries health-beauty home-garden jewelry-watches kids kitchen-bath outlet photo sports-outdoors tools-hardware
             //not sure but left in
             divId: 'papermart-div',
-            dataSearchLink: 'http://www.papermart.com/CombinedSearch?SearchStr=',
+            dataSearchLink: 'http://www.papermart.com/CombinedSearch?camefromshoppershelper&SearchStr=',
             dataAppendToSearchLink: '',
             linkId: 'papermart-link',
             nameForButton: 'PAPERMART',
@@ -529,7 +546,7 @@ $(function () { // setting the array of stores with the properties
         //    //not sure but took out department-stores
         //    //not sure but left in
         //    divId: 'saksfifthavenue-div',
-        //    dataSearchLink: 'https://www.saksfifthavenue.com/search/EndecaSearch.jsp?SearchString=',
+        //    dataSearchLink: 'https://www.saksfifthavenue.com/search/EndecaSearch.jsp?camefromshoppershelper&SearchString=',
         //    //dataSearchLink: 'www.saksfifthavenue.com%2Fsearch%2FEndecaSearch.jsp%3FSearchString%3D',
         //    dataAppendToSearchLink: '&submit-search=&N_Dim=0&Ntk=Entire+Site&Ntx=mode%2Bmatchpartialmax&prp8=t15&prp13=&sid=158636745A6E&FOLDER%3C%3Efolder_id=',
         //    //dataAppendToSearchLink: '%26submit-search%3D%26N_Dim%3D0%26Ntk%3DEntire%2BSite%26Ntx%3Dmode%252Bmatchpartialmax%26prp8%3Dt15%26prp13%3D%26sid%3D158B62A992AA%26FOLDER%253C%253Efolder_id%3D',
@@ -545,7 +562,7 @@ $(function () { // setting the array of stores with the properties
             //not sure but took out department-stores
             //not sure but left in
             divId: 'saksoff5th-div',
-            //dataSearchLink: 'http://www.saksoff5th.com/search/EndecaSearch.jsp?bmForm=endeca_search_form_one&submit-search=&bmSingle=N_Dim&N_Dim=0&bmHidden=Ntk&Ntk=Entire+Site&bmHidden=Ntx&Ntx=mode%2Bmatchpartialmax&SearchString=',
+            //dataSearchLink: 'http://www.saksoff5th.com/search/EndecaSearch.jsp?camefromshoppershelper&bmForm=endeca_search_form_one&submit-search=&bmSingle=N_Dim&N_Dim=0&bmHidden=Ntk&Ntk=Entire+Site&bmHidden=Ntx&Ntx=mode%2Bmatchpartialmax&SearchString=',
             dataSearchLink: 'www.saksoff5th.com%2Fsearch%2FEndecaSearch.jsp%3FbmForm%3Dendeca_search_form_one%26submit-search%3D%26bmSingle%3DN_Dim%26N_Dim%3D0%26bmHidden%3DNtk%26Ntk%3DEntire%2BSite%26bmHidden%3DNtx%26Ntx%3Dmode%252Bmatchpartialmax%26SearchString%3D',
             dataAppendToSearchLink: '',
             linkId: 'saksoff5th-link',
@@ -560,7 +577,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out
            //not sure but left in department-stores
            divId: 'samsclub-div',
-           //dataSearchLink: 'http://www.samsclub.com/sams/search/searchResults.jsp?searchCategoryId=all&searchTerm=',
+           //dataSearchLink: 'http://www.samsclub.com/sams/search/searchResults.jsp?camefromshoppershelper&searchCategoryId=all&searchTerm=',
            dataSearchLink: 'www.samsclub.com%2Fsams%2Fsearch%2FsearchResults.jsp%3FsearchCategoryId%3Dall%26searchTerm%3D',
            dataAppendToSearchLink: '',
            linkId: 'samsclub-link',
@@ -603,7 +620,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out department-stores furniture-and-decor groceries health-beauty  outlet photo tools-hardware
            //not sure but left in clothing home-garden jewelry-watches kitchen-bath
            divId: 'thinkgeek-div',
-           dataSearchLink: 'https://www.thinkgeek.com/brain/whereisit.cgi?t=',
+           dataSearchLink: 'https://www.thinkgeek.com/brain/whereisit.cgi?camefromshoppershelper&t=',
            dataAppendToSearchLink: '',
            linkId: 'thinkgeek-link',
            nameForButton: 'THINKGEEK',
@@ -631,7 +648,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out department-stores outlet photo
            //not sure but left in
            divId: 'toysrus-div',
-           dataSearchLink: 'http://www.toysrus.com/search/controller.jsp?kw=',
+           dataSearchLink: 'http://www.toysrus.com/search/controller.jsp?camefromshoppershelper&kw=',
            dataAppendToSearchLink: '',
            linkId: 'toysrus-link',
            nameForButton: 'TOYS R US',
@@ -645,7 +662,7 @@ $(function () { // setting the array of stores with the properties
            //not sure but took out
            //not sure but left in
            divId: 'wayfair-div',
-           dataSearchLink: 'https://www.wayfair.com/keyword.php?keyword=',
+           dataSearchLink: 'https://www.wayfair.com/keyword.php?camefromshoppershelper&keyword=',
            dataAppendToSearchLink: '',
            linkId: 'wayfair-link',
            nameForButton: 'WAYFAIR',
@@ -718,25 +735,38 @@ $(function () { // setting the array of stores with the properties
         }
     }
 
+    var vigLinkPrefix = 'https://redirect.viglink.com?key=1dae17530df9ea6aad1c242af589131e&u=';
+
+    function setViglinkAnywhereLink(link) {
+        return ('https://redirect.viglink.com?key=1dae17530df9ea6aad1c242af589131e&u=' +
+            link.replace(':', '%3A').replace('/', '%2F')
+                .replace('?', '%3F').replace('=', '%3D').replace(' ', '%2B').replace('&','%26'));
+    }
+
     $('#primary-group-search').click(function () { // when click multi search
         for (var i = 0; i < stores.length; i++) {
             if ($('#stores-table #' + stores[i].divId + '-checkbox').is(':checked')) {
+                //setTimeout(function (i) {        
                 //alert(stores[i].divId);
-                //setTimeout(function () {        
                 if (stores[i].divId === 'kmart-div' || stores[i].divId === 'macys-div' || stores[i].divId === 'sears-div' || stores[i].divId === '6pm-div' || $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href') === stores[i].href) {
+                    //$('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href', $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href') + "?camefromshoppershelper");
                     $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href', $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href') + "?camefromshoppershelper");
                 } else if (stores[i].divId !== 'saksoff5th-div' && stores[i].divId !== 'rakuten-div') {
                 //$('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href', $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href') + "&camefromshoppershelper");
 
                     //for viglink redirect:
-                    $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href', $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href') + "%26camefromshoppershelper");
+                    //$('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href', $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href') + "%26camefromshoppershelper");
+                    $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href', $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href'));
                 }
                     
                 
 
-                $('#stores-table #' + stores[i].divId + ' .primary-search-link')[0].click();
+                //$('#stores-table #' + stores[i].divId + ' .primary-search-link')[0].click();
+                //chrome.tabs.create({ url: $('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href'), selected: false });
+                chrome.tabs.create({ url: setViglinkAnywhereLink($('#stores-table #' + stores[i].divId + ' .primary-search-link').attr('href')), selected: false });
+                //window.open();
                 //$('#stores-table #' + stores[i].divId + ' .primary-search-link')[0].trigger('click');
-                //},200);
+                //}(i),200);
             }
         }
     });
@@ -747,9 +777,12 @@ $(function () { // setting the array of stores with the properties
                 if (stores[i].divId === 'kmart-div' || stores[i].divId === 'macys-div' || stores[i].divId === 'sears-div' || stores[i].divId === '6pm-div' || $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href') === stores[i].href) {
                     $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href', $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href') + "?camefromshoppershelper");
                 } else if (stores[i].divId !== 'saksoff5th-div' && stores[i].divId !== 'rakuten-div') {
-                    $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href', $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href') + "&camefromshoppershelper");
+                    //$('#stores-table #' + stores[i].divId + ' .upc-link').attr('href', $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href') + "&camefromshoppershelper");
+                    $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href', $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href'));
                 }
-                $('#stores-table #' + stores[i].divId + ' .upc-link')[0].click();
+                //$('#stores-table #' + stores[i].divId + ' .upc-link')[0].click();
+                //chrome.tabs.create({ url: $('#stores-table #' + stores[i].divId + ' .upc-link').attr('href'), selected: false });
+                chrome.tabs.create({ url: setViglinkAnywhereLink($('#stores-table #' + stores[i].divId + ' .upc-link').attr('href')), selected: false });
                 //$('#stores-table #' + stores[i].upcAId)[0].click();
             }
         }
@@ -761,9 +794,12 @@ $(function () { // setting the array of stores with the properties
                 if (stores[i].divId === 'kmart-div' || stores[i].divId === 'macys-div' || stores[i].divId === 'sears-div' || stores[i].divId === '6pm-div' || $('#stores-table #' + stores[i].divId + ' .model-link').attr('href') === stores[i].href) {
                     $('#stores-table #' + stores[i].divId + ' .model-link').attr('href', $('#stores-table #' + stores[i].divId + ' .model-link').attr('href') + "?camefromshoppershelper");
                 } else if (stores[i].divId !== 'saksoff5th-div' && stores[i].divId !== 'rakuten-div') {
-                    $('#stores-table #' + stores[i].divId + ' .model-link').attr('href', $('#stores-table #' + stores[i].divId + ' .model-link').attr('href') + "&camefromshoppershelper");
+                    //$('#stores-table #' + stores[i].divId + ' .model-link').attr('href', $('#stores-table #' + stores[i].divId + ' .model-link').attr('href') + "&camefromshoppershelper");
+                    $('#stores-table #' + stores[i].divId + ' .model-link').attr('href', $('#stores-table #' + stores[i].divId + ' .model-link').attr('href'));
                 }
-                $('#stores-table #' + stores[i].divId + ' .model-link')[0].click();
+                //$('#stores-table #' + stores[i].divId + ' .model-link')[0].click();
+                //chrome.tabs.create({ url: $('#stores-table #' + stores[i].divId + ' .model-link').attr('href'), selected: false });
+                chrome.tabs.create({ url: setViglinkAnywhereLink($('#stores-table #' + stores[i].divId + ' .model-link').attr('href')), selected: false });
             }
         }
     });
@@ -858,11 +894,15 @@ $(function () { // setting the array of stores with the properties
         $('#model-number').val('');
     }
 
+    
+
     $(document).ready(function () {
         $('body a').click(function () {
-            //alert('hi');
-            if (!$(this).closest($('div').attr('id')) === 'ebay-div' && !$(this).closest($('div').attr('id')) === 'target-div' && !$(this).closest($('div').attr('id')) === 'bestbuy-div') {
-            $(this).attr('href', 'http://redirect.viglink.com/?key=7e171a6c0caa8bab0488b1ce5c1b5f94&u=http%3A%2F%2F' + $(this).attr('href').replace('http://', '').replace('https://', '').replace(':', '%3A').replace('/', '%2F').replace('?', '%3F').replace('=', '%3D').replace(' ', '%2B'));
+            
+            if ($(this).closest($('tr')).attr('id') !== 'ebay-div'&&$(this).closest($('tr')).attr('id') !== 'amazon-div') {
+            //$(this).attr('href', 'http://redirect.viglink.com/?key=7e171a6c0caa8bab0488b1ce5c1b5f94&u=http%3A%2F%2F' + $(this).attr('href').replace('http://', '').replace('https://', '').replace(':', '%3A').replace('/', '%2F').replace('?', '%3F').replace('=', '%3D').replace(' ', '%2B'));
+                $(this).attr('href', setViglinkAnywhereLink($(this).attr('href')));
+                //alert('hi');
             }
             
         });
@@ -1025,12 +1065,12 @@ $(function () { // setting the array of stores with the properties
 
         } else {
 
-            $('#amazon-link').attr('href', 'http://www.amazon.com');
+            $('#amazon-link').attr('href', 'http://www.amazon.com?tag=ymwsbannerpage');
             $('#ebay-link').attr('href', 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com');
             //$('#ebay-link').attr('href', 'http://www.ebay.com');
             $('#target-link').attr('href', 'http://goto.target.com/c/325851/81938/2092');
             //$('#target-link').attr('href', 'http://www.target.com');
-            $('#bestbuy-link').attr('href', 'http://click.linksynergy.com/fs-bin/click?id=m*/k*5ti41w&subid=&offerid=448595.1&type=10&tmpid=13128&RD_PARM1=http%3A%2F%2Fwww.bestbuy.com');
+            $('#bestbuy-link').attr('href', 'http://www.bestbuy.com');
             //$('#bestbuy-link').attr('href', 'http://www.bestbuy.com');
             $('#kmart-link').attr('href', 'http://www.kmart.com');
             $('#walmart-link').attr('href', 'http://www.walmart.com');
@@ -1207,3 +1247,9 @@ $(function () { // setting the array of stores with the properties
     }
     $('#bottom-container').append('<span>Disclosure: This site receives compensation from some of the companies whose sites are linked to on this site.</span>');
 });
+
+
+
+
+
+

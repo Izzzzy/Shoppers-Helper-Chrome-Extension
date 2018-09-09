@@ -226,7 +226,7 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
     //        searchTerm: $('')
     //    });
     //} 
-} else if (currentPage.indexOf('bestbuy.com') > -1 && $('#schemaorg-offer').length) { // schemaorg-offer is the add to list button on the product page
+} else if (currentPage.indexOf('bestbuy.com') > -1){// > -1 && $('#schemaorg-offer').length) { // schemaorg-offer is the add to list button on the product page
 
     productAndSiteInfo = {};
     productAndSiteInfo = {
@@ -527,11 +527,11 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
         price: $('.price.h3.font-bold.text-black').html()
     };
 
-    if ($('.module-product.pb1 .h3.mb0.name').length) {
+    if ($('.sc-feJyhm.eKdSjy').length) {
         //alert('hi');
         identifiers.push({
             searchName: 'Product',
-            searchTerm: $('.module-product.pb1 .h3.mb0.name').text()
+            searchTerm: $('.sc-feJyhm.eKdSjy').text()
         });
 
     }
@@ -834,23 +834,23 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
     //        searchTerm: $('')
     //    });
     //} 
-} else if (currentPage.indexOf('target.com') > -1 && $('#stickySidebar').length) {
-
+} else if (currentPage.indexOf('target.com') > -1) {
+//} else if (currentPage.indexOf('target.com') > -1 && $('#stickySidebar').length) {
     productAndSiteInfo = {
         siteName: 'target.com',
         url: document.location.href,
         price: $('#stickySidebar .price .h-text-lowercase').text().trim()
     };
-    if ($('.title-product span[itemprop="name"]').text().trim().length) {
+    if ($('.h-text-hd2.h-margin-b-none.h-margin-b-tiny.h-text-normal.h-margin-t-default span[itemprop="name"]').text().trim().length) {
         identifiers.push({
             searchName: 'Product',
-            searchTerm: $('.title-product span[itemprop="name"]').text().trim()
+            searchTerm: $('.h-text-hd2.h-margin-b-none.h-margin-b-tiny.h-text-normal.h-margin-t-default span[itemprop="name"]').text().trim()
         });
     }
-    if ($('.accordion--item li:contains("UPC:") span').text().length) {
+    if ($('.h-padding-b-tight:contains("UPC:") b').text().length) {
         identifiers.push({
             searchName: 'UPC',
-            searchTerm: $('.accordion--item li:contains("UPC:") span').text()
+            searchTerm: $('.h-padding-b-tight:contains("UPC:")').text().replace('UPC: ','')
         });
     }
 
@@ -905,10 +905,11 @@ if (currentPage.indexOf('amazon.com') > -1 && $('#productTitle').length) {
         url: document.location.href,
         price: $('.Price.Price--stylized.Price--large.hide-content.display-inline-m.price-display').text()
     };
-    if ($('.prod-title-section h1 span').length) {
+    if ($('.prod-ProductTitle').length) {
         identifiers.push({
             searchName: 'Product',
-            searchTerm: $('.prod-title-section h1 span').text().trim()
+            //searchTerm: $('.prod-title-section h1 span').text().trim()
+            searchTerm: $('.prod-ProductTitle').attr('content')
         });
     } else if ($('.prod-ProductTitle.no-margin.heading-b').length) {
         identifiers.push({
