@@ -7,7 +7,7 @@ $(function () { // setting the array of stores with the properties
         //not sure but took out
         //not sure but left in
         divId: 'amazon-div',
-        dataSearchLink: 'https://www.amazon.com/s/?camefromshoppershelper&tag=ymwsbannerpage&field-keywords=',
+        dataSearchLink: 'https://www.amazon.com/s/?field-keywords=',
         dataAppendToSearchLink: '',
         linkId: 'amazon-link',
         nameForButton: 'AMAZON',
@@ -738,9 +738,9 @@ $(function () { // setting the array of stores with the properties
     var vigLinkPrefix = 'https://redirect.viglink.com?key=1dae17530df9ea6aad1c242af589131e&u=';
 
     function setViglinkAnywhereLink(link) {
-        return ('https://redirect.viglink.com?key=1dae17530df9ea6aad1c242af589131e&u=' +
+        return (link.indexOf('amazon.com')=== -1&&link.indexOf('ebay.com')=== -1)? ('https://redirect.viglink.com?key=1dae17530df9ea6aad1c242af589131e&u=' +
             link.replace(':', '%3A').replace('/', '%2F')
-                .replace('?', '%3F').replace('=', '%3D').replace(' ', '%2B').replace('&','%26'));
+                .replace('?', '%3F').replace('=', '%3D').replace(' ', '%2B').replace('&','%26')):link;
     }
 
     $('#primary-group-search').click(function () { // when click multi search
@@ -899,11 +899,13 @@ $(function () { // setting the array of stores with the properties
     $(document).ready(function () {
         $('body a').click(function () {
             
-            if ($(this).closest($('tr')).attr('id') !== 'ebay-div'&&$(this).closest($('tr')).attr('id') !== 'amazon-div') {
+            //if ($(this).closest($('tr')).attr('id') !== 'ebay-div'&&$(this).closest($('tr')).attr('id') !== 'amazon-div') {
+
             //$(this).attr('href', 'http://redirect.viglink.com/?key=7e171a6c0caa8bab0488b1ce5c1b5f94&u=http%3A%2F%2F' + $(this).attr('href').replace('http://', '').replace('https://', '').replace(':', '%3A').replace('/', '%2F').replace('?', '%3F').replace('=', '%3D').replace(' ', '%2B'));
                 $(this).attr('href', setViglinkAnywhereLink($(this).attr('href')));
                 //alert('hi');
-            }
+                
+            //}
             
         });
         if ($('#search-text').val().length) {
@@ -1065,7 +1067,7 @@ $(function () { // setting the array of stores with the properties
 
         } else {
 
-            $('#amazon-link').attr('href', 'http://www.amazon.com?tag=ymwsbannerpage');
+            $('#amazon-link').attr('href', 'http://www.amazon.com');
             $('#ebay-link').attr('href', 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com');
             //$('#ebay-link').attr('href', 'http://www.ebay.com');
             $('#target-link').attr('href', 'http://goto.target.com/c/325851/81938/2092');
