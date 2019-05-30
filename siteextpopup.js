@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var prefillRegPrice = request.prefillRegPrice;
                 if (!$('#amount-to-calculate').length) {
                     $('#sell-div').append('<div id="sellers-helper-div" class="well" style="text-align:center;"><h4 id="sellers-helper-heading">Online Seller\'s Helper<h4><span style="font-size:10pt; margin-top:18px;">Quick search ' + request.quickSearchInfo.searchtype.replace('Product', 'Product Name').toUpperCase() +
-                        ' on: <br/></span><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3D' + request.quickSearchInfo.searchterm + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px;' +
+                        ' on: <br/></span><a href="ebayLink' + request.quickSearchInfo.searchterm + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px;' +
                         ' width:55.44px;">Ebay</a><br/><br/><h5 style="margin-top:18px;">FBA Calculator<h5>$<input type="text"class="form-control" style="width:100px;display:inline;" id="amount-to-calculate" placeholder="' + prefillRegPrice.replace('$', '') +
                         '"> <h5><h5> <a href="https://sellercentral.amazon.com/fba/profitabilitycalculator/index?lang=en_US" target="_blank" class="btn btn-warning btn-xs"style="width:60.14px;" id="rev-calculate">Reverse</a> <a href="https://sellercentral.amazon.com/fba/profitabilitycalculator/index?lang=en_US" ' +
                         'target="_blank" class="btn btn-primary btn-xs" id="reg-calculate">Calculate</a></div>')
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 //if (!$('#sellers-helper-div').length && request.quickSearchInfo.greeting === 'Ebay product page') {
                 //    $('#sell-div').append('<div id="sellers-helper-div" class="well" style="text-align:center;"><h4>Online Seller\'s Helper<h4><span style="font-size:10pt;">Quick search ' + request.quickSearchInfo.searchtype.replace('Product', 'Product Name').toUpperCase() + ' on: <br/></span><a href="https://www.amazon.com/s/?field-keywords=' + request.quickSearchInfo.searchterm + '" target="_blank" class="btn btn-success btn-xs" style="margin-top:8px;">Amazon</a></div>');
                 //} else if (!$('#sellers-helper-div').length && request.quickSearchInfo.greeting === 'Regular product page') {
-                //    $('#sell-div').append('<div id="sellers-helper-div" class="well" style="text-align:center;"><h4>Online Seller\'s Helper<h4><span style="font-size:10pt;">Quick search ' + request.quickSearchInfo.searchtype.replace('Product', 'Product Name').toUpperCase() + ' on: <br/></span><a id="ebay-button" href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3D' + request.quickSearchInfo.searchterm + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px; width:55.44px;">Ebay</a> <a id="amazon-button" href="https://www.amazon.com/s/?field-keywords=' + request.quickSearchInfo.searchterm + '" target="_blank" class="btn btn-success btn-xs" style="margin-top:8px;">Amazon</a><br/><button id="both-button" class="btn btn-default btn-xs" style="margin-top:8px; width:55.44px;">Or Both</button></div>');
+                //    $('#sell-div').append('<div id="sellers-helper-div" class="well" style="text-align:center;"><h4>Online Seller\'s Helper<h4><span style="font-size:10pt;">Quick search ' + request.quickSearchInfo.searchtype.replace('Product', 'Product Name').toUpperCase() + ' on: <br/></span><a id="ebay-button" href="ebayLink' + request.quickSearchInfo.searchterm + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px; width:55.44px;">Ebay</a> <a id="amazon-button" href="https://www.amazon.com/s/?field-keywords=' + request.quickSearchInfo.searchterm + '" target="_blank" class="btn btn-success btn-xs" style="margin-top:8px;">Amazon</a><br/><button id="both-button" class="btn btn-default btn-xs" style="margin-top:8px; width:55.44px;">Or Both</button></div>');
                 //}
                 identifiers = request.identifiers;
                 productAndSiteInfo = request.productAndSiteInfo;
@@ -279,7 +279,7 @@ function setMainLinks() {
     } else {
 
         $('#amazon-link').attr('href', 'http://www.amazon.com');
-        $('#ebay-link').attr('href', 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com');
+        $('#ebay-link').attr('href', ebayLink);
         //$('#target-link').attr('href', 'http://goto.target.com/c/325851/81938/2092');
         $('#target-link').attr('href', 'http://www.target.com');
         $('#bestbuy-link').attr('href', 'http://click.linksynergy.com/fs-bin/click?id=m*/k*5ti41w&subid=&offerid=448595.1&type=10&tmpid=13128&RD_PARM1=http%3A%2F%2Fwww.bestbuy.com');

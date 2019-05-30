@@ -265,7 +265,7 @@ $(function () {
                                                 //'<h4>Search this PRODUCT NAME on <a style="color:blue;" id="search-on-site" href="http://onlineshoppershelper.com" target="_blank">OnlineShoppersHelper.com</a><h4><br/>' +
                                                 '<h4>Search this ' + shopText + ' on <a style="color:#085eb9;" id="search-on-site" href="http://onlineshoppershelper.com" target="_blank">OnlineShoppersHelper.com</a><h4><br/>' +
                                                 '<span style="font-size:10pt; margin-top:18px;">Quick search ' + quickSearchName + ' on: ' +
-                                                '<br/></span><a id="ebay-button" href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3D' + quickSearchText + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px;' +
+                                                '<br/></span><a id="ebay-button" href="ebayLink' + quickSearchText + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px;' +
                                                 ' width:55.44px;height:21.2px;color:white;background-color:rgb(201, 48, 44);border-color:rgb(172, 41, 37);text-align:center;vertical-align: middle;font-size:12px;font-weight: 700;padding:0px;">Ebay</a> <a id="amazon-button" href="https://www.amazon.com/s/?field-keywords=' + quickSearchText + '" target="_blank" class="btn btn-success btn-xs" style="margin-top:8px;' +
                                                 ' width:55.44px;height:21.2px;color:white;background-color: rgb(92, 184, 92);border-color: rgb(76, 174, 76);text-align:center;font-size:12px;font-weight: 700;padding:0px;">Amazon</a><br/><button id="both-button" class="btn btn-default btn-xs" style="margin-top:8px; width:55.44px;height:21.2px;color:black;font-size:12px;font-weight: 700;padding:0px;">'+
                                                 'Or Both</button><button id="x-out" class="close"style="position:absolute; top:2px; right:2px;">&times;</button></div></div>');
@@ -367,7 +367,7 @@ $(function () {
                                                 $('body').append('<div id="appended-div" style="width:270px;color:black;position: absolute;top:' + ($(this).closest('div').offset().top + 18) + 'px;left:' + $(this).closest('.s-item-container').find('.uncalculate-button').offset().left + 'px;"><div id="sellers-helper-div" class="well" style="text-align:center;">' +
                                                     '<h4>Search this PRODUCT NAME on <a id="search-on-site" href="http://onlineshoppershelper.com" target="_blank">OnlineShoppersHelper.com</a><h4><br/>' +
                                                     '<span style="font-size:10pt; margin-top:18px;">Quick search PRODUCT NAME on: ' +
-                                                    '<br/></span><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3D' + prodName + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px;' +
+                                                    '<br/></span><a href="ebayLink' + prodName + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px;' +
                                                     ' width:55.44px;color:white;">Ebay</a></div></div>');
                                                 //// .position() uses position relative to the offset parent, 
                                                 //var pos = $(this).closest('.s-item-container').find('#uncalculate-button').position();
@@ -431,7 +431,7 @@ $(function () {
                                                 $('body').append('<div id="appended-div" style="width:270px;color:black;position: absolute;top:' + ($(this).closest('div').offset().top + 18) + 'px;left:' + $(this).closest('.zg_itemImmersion').find('.uncalculate-button').offset().left + 'px;"><div id="sellers-helper-div" class="well" style="text-align:center;">' +
                                                     '<h4>Search this PRODUCT NAME on <a id="search-on-site" href="http://onlineshoppershelper.com" target="_blank">OnlineShoppersHelper.com</a><h4><br/>' +
                                                     '<span style="font-size:10pt; margin-top:18px;">Quick search PRODUCT NAME on: ' +
-                                                    '<br/></span><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3D' + prodName + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px;' +
+                                                    '<br/></span><a href="ebayLink' + prodName + '" target="_blank" class="btn btn-danger btn-xs" style="margin-top:8px;' +
                                                     ' width:55.44px;color:white;">Ebay</a></div></div>');
                                                 //// .position() uses position relative to the offset parent, 
                                                 //var pos = $(this).closest('.s-item-container').find('#uncalculate-button').position();

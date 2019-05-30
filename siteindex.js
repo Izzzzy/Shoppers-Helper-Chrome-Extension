@@ -1,3 +1,19 @@
+var app = angular.module('myApp', []);
+//$.ajax({
+//    type: 'POST',
+//    //data: myData, // #2
+//    url: '/Home/customerOfferEmail',
+//    //contentType: 'application/json', #3
+//    //dataType: 'json', #2
+//    //success: alert('Youhou'),
+//    //error: alert('not good')
+//});
+//window.onbeforeunload = function () {
+//            alert('Are you sure you want to leave?');
+//        };
+
+app.controller('myCtrl',
+    function($scope) {
 $(function () { // setting the array of stores with the properties
 
     var stores = [
@@ -15,22 +31,22 @@ $(function () { // setting the array of stores with the properties
         upcAId: 'upc-amazon-link',
         modelAId: 'model-number-amazon-link'
     },
-    {
-        categoryClasses: 'all auto baby-toddler books cell-phones-accessories clothing computers department-stores electronics-and-office furniture-and-decor groceries health-beauty home-garden jewelry-watches kids kitchen-bath outlet photo sports-outdoors tools-hardware',
-        //took out
-        //not sure but took out
-        //not sure but left in
-        divId: 'ebay-div',
-        dataSearchLink: 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?camefromshoppershelper&ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3D',
-        //dataSearchLink: 'http://www.ebay.com%2Fsch%2Fi.html%3F_nkw%3D',
-        dataAppendToSearchLink: '',
-        linkId: 'ebay-link',
-        nameForButton: 'EBAY',
-        href: 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com',
-        //href: 'http://www.ebay.com',
-        upcAId: 'upc-ebay-link',
-        modelAId: 'model-number-ebay-link'
-    },
+    // {
+    //     categoryClasses: 'all auto baby-toddler books cell-phones-accessories clothing computers department-stores electronics-and-office furniture-and-decor groceries health-beauty home-garden jewelry-watches kids kitchen-bath outlet photo sports-outdoors tools-hardware',
+    //     //took out
+    //     //not sure but took out
+    //     //not sure but left in
+    //     divId: 'ebay-div',
+    //     dataSearchLink: ebayLink+'%2Fsch%2Fi.html%3F_nkw%3D',
+    //     //dataSearchLink: 'http://www.ebay.com%2Fsch%2Fi.html%3F_nkw%3D',
+    //     dataAppendToSearchLink: '',
+    //     linkId: 'ebay-link',
+    //     nameForButton: 'EBAY',
+    //     href: ebayLink,
+    //     //href: 'http://www.ebay.com',
+    //     upcAId: 'upc-ebay-link',
+    //     modelAId: 'model-number-ebay-link'
+    // },
     {
         categoryClasses: 'all auto baby-toddler books cell-phones-accessories clothing computers department-stores electronics-and-office furniture-and-decor groceries health-beauty home-garden jewelry-watches kids kitchen-bath outlet photo sports-outdoors tools-hardware',
         //took out
@@ -1068,7 +1084,7 @@ $(function () { // setting the array of stores with the properties
         } else {
 
             $('#amazon-link').attr('href', 'http://www.amazon.com');
-            $('#ebay-link').attr('href', 'http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&pub=5575226091&toolid=10001&campid=5337959871&customid=&mpre=http%3A%2F%2Fwww.ebay.com');
+            $('#ebay-link').attr('href', ebayLink);
             //$('#ebay-link').attr('href', 'http://www.ebay.com');
             $('#target-link').attr('href', 'http://goto.target.com/c/325851/81938/2092');
             //$('#target-link').attr('href', 'http://www.target.com');
@@ -1249,6 +1265,7 @@ $(function () { // setting the array of stores with the properties
     }
     $('#bottom-container').append('<span>Disclosure: This site receives compensation from some of the companies whose sites are linked to on this site.</span>');
 });
+    });
 
 
 

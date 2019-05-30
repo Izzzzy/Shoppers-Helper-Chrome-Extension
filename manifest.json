@@ -3,7 +3,7 @@
 
     "name": "Shopper's Helper",
     "description": "Helps USER find cheapest products online.",
-    "version": "0.0.0.9",
+    "version": "0.0.1.4",
 
     "browser_action": {
         "default_icon": "orangeicon.png",
@@ -42,7 +42,8 @@
     "background": {  
     "scripts": ["jquery-2.2.4.js", "siteextbackground.js"],  
     "persistent":false  
-  },  
+  },
+  "content_security_policy": "script-src 'self' https://fullstory.com/s/fs.js; object-src 'self'", 
 
   "permissions": [
     "activeTab",
