@@ -60,28 +60,28 @@
     <div id="first-part">
         <div class="well box2" style="width: 98%; margin-bottom: 5px;">
 
-            <h5>
-                Click "Multi Search!" to open each checked store simultaneously, or click on any single store you would like to search separately.
-            </h5>
+            <h4 ng-style="!myObjects.firstInput?{}:{'visibility':'hidden'}">
+                Enter search to search stores listed below.
+            </h4>
             <div class="row" style="text-align: center">
 
-                <input id="search-text" type="text" class="form-control" style="display: inline; width: calc(100% - 110px); overflow: visible;" placeholder="Enter a Search Term, UPC Code, Model #, etc."/>
-                <button class="btn btn-primary group-search-button" id="primary-group-search" style="display: inline;">Multi Search!</button>
-
+                <input id="search-text" ng-model="myObjects.firstInput" type="text" class="form-control" style="display: inline; width: calc(100% - 110px); overflow: visible; border: 2px solid blue" placeholder="Search Term, UPC Code, Model #, etc."/>
+                <button ng-style="(inputs|filter:{'isChecked':'true'}).length>0 && myObjects.firstInput?{}:{'visibility':'hidden'}" class="btn btn-primary group-search-button" id="primary-group-search" style="display: inline;">Multi Search!</button>
             </div>
             <!--<br/>-->
-            <div id="second-search-div" class="row" style="text-align: center">
+            <div id="second-search-div" ng-model="myObjects.secondInput" class="row" style="text-align: center">
                 <!--<input id="second-search-name" type="text" class="form-control" style="display:inline; width: 100px; text-align: center; color: #eea236; " placeholder="2nd Search" onclick="this.setSelectionRange(0, this.value.length)" value="2nd Search"/>-->
                 <input id="upc-code" type="text" class="form-control" style="display: inline; width: calc(100% - 110px);" placeholder="Enter a 2nd Search Term, UPC Code, Model #, etc."/>
-                <button class="btn btn-warning group-search-button" id="second-group-search">Multi Search!</button>
+                <button ng-style="(inputs|filter:{'isChecked':'true'}).length>0 && myObjects.secondInput?{}:{'visibility':'hidden'}" class="btn btn-warning group-search-button" id="second-group-search">Multi Search!</button>
             </div>
 
             <!--<br/>-->
-            <div id="third-search-div" class="row" style="text-align: center;">
+            <div id="third-search-div" ng-model="myObjects.thirdInput" class="row" style="text-align: center;">
                 <!--<input id="third-search-name" type="text" class="form-control" style="display:inline; width: 100px; text-align: center; color: #269abc;" placeholder="3rd Search" onclick="this.setSelectionRange(0, this.value.length)" value="3rd Search"/>-->
                 <input id="model-number" type="text" class="form-control" style="display: inline; width: calc(100% - 110px);" placeholder="Enter a 3rd Search Term, UPC Code, Model #, etc."/>
-                <button class="btn btn-info group-search-button" id="third-group-search">Multi Search!</button>
+                <button ng-style="(inputs|filter:{'isChecked':'true'}).length>0 && myObjects.thirdInput?{}:{'visibility':'hidden'}" class="btn btn-info group-search-button" id="third-group-search">Multi Search!</button>
             </div>
+            <h5 ng-style="myObjects.firstInput&&!(inputs|filter:{'isChecked':'true'}).length>0?{}:{'visibility':'hidden'}">Select 1 or more stores to enable "Multi Search!"</h5>
         </div>
         <div id="store-select" class="row storeSelect" style="margin-left: 20px; margin-right: 20px;">
             <div class=" row storeselect">
@@ -99,7 +99,7 @@
                     <option id="toys-group" value="kids">Toys</option>
 
                 </select>
-                <input id="all-checkbox" type="checkbox"> All
+                <!-- <div ng-style="myObjects.firstInput?{}:{'visibility':'hidden'}"><input id="all-checkbox" type="checkbox"> All</div> -->
             </div>
         </div>
     </div>

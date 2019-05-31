@@ -147,7 +147,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 var idText = '';
 
                 if (identifiers[0] !== "undefined") {
-                    $('#search-text').val(identifiers[0].searchTerm);
+                    //$('#search-text').val(identifiers[0].searchTerm);
+                    myScope.myObjects.firstInput=identifiers[0].searchTerm;
+                    myScope.$apply();
                     $('#primary-search-name').val(identifiers[0].searchName);
                     setMainLinks();
                     $('.btn-primary.btn-xs').html(identifiers[0].searchName);
@@ -155,7 +157,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (identifiers[1] !== "undefined") {
                     //alert(identifiers[1].searchName);
-                    $('#upc-code').val(identifiers[1].searchTerm);
+                    //$('#upc-code').val(identifiers[1].searchTerm);
+                    myScope.myObjects.secondInput=identifiers[0].searchTerm;
+                    myScope.$apply();
                     $('#second-search-name').val(identifiers[1].searchName);
                     setUpcLinks();
                     $('.btn-second-search.btn-warning.btn-xs').html(identifiers[1].searchName);
@@ -169,6 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (identifiers[2] !== "undefined") {
                     //alert(identifiers[2].searchName);
                     $('#model-number').val(identifiers[2].searchTerm);
+                    myScope.myObjects.thirdInput=identifiers[0].searchTerm;
+                    myScope.$apply();
                     $('#third-search-name').val(identifiers[2].searchName);
                     setModelNumberLinks();
                     $('.btn-third-search.btn-info.btn-xs').html(identifiers[2].searchName);

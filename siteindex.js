@@ -1,19 +1,19 @@
-var app = angular.module('myApp', []);
-//$.ajax({
-//    type: 'POST',
-//    //data: myData, // #2
-//    url: '/Home/customerOfferEmail',
-//    //contentType: 'application/json', #3
-//    //dataType: 'json', #2
-//    //success: alert('Youhou'),
-//    //error: alert('not good')
-//});
-//window.onbeforeunload = function () {
-//            alert('Are you sure you want to leave?');
-//        };
-
+var myScope;
+var app = angular.module('myApp', [])
+.config([
+    '$compileProvider',
+    function ($compileProvider) {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|file|ms-excel|ms-word):/);
+        // Angular before v1.2 uses $compileProvider.urlSanitizationWhitelist(...)
+    }
+]);
 app.controller('myCtrl',
-    function($scope) {
+    function($scope,$compile) {
+        $scope.myObjects={};
+        myScope=$scope;
+        $scope.somethingChecked=function(){
+           return $scope.inputs.filter(function(e){return e.isChecked}).length>0
+        };
 $(function () { // setting the array of stores with the properties
 
     var stores = [
@@ -737,15 +737,16 @@ $(function () { // setting the array of stores with the properties
     //    //$('#stores-table #' + stores[i].divId + '-checkbox').prop('checked', true);
     //    $('.checkboxed').change();
     //});
-
+$scope.inputs=[];
     for (var i = 0; i < stores.length; i++) { // setting up the stores
-        $('#stores-table').append('<tr id="' + stores[i].divId + '"class="store-div ' + stores[i].categoryClasses + '" data-search-link="' + stores[i].dataSearchLink +
-            '" data-append-to-search-link="' + stores[i].dataAppendToSearchLink + '"><td><input id="' + stores[i].divId + '-checkbox" type="checkbox" class="checkboxed"> <a id="' + stores[i].linkId +
+        $scope.inputs.push({});
+        $('#stores-table').append($compile('<tr id="' + stores[i].divId + '"class="store-div ' + stores[i].categoryClasses + '" data-search-link="' + stores[i].dataSearchLink +
+            '" data-append-to-search-link="' + stores[i].dataAppendToSearchLink + '"><td><input ng-model="inputs['+i+'].isChecked" ng-show="myObjects.firstInput" id="' + stores[i].divId + '-checkbox" type="checkbox" class="checkboxed"> <a id="' + stores[i].linkId +
             '" class="store-link" target="_blank" href="' + stores[i].href + '"><span style="font-size:12pt;margin:auto">' + stores[i].nameForButton +
             '</span></a></td><td><a id="'
             + stores[i].modelAId + '" class="btn btn-primary btn-xs primary-search-link"style="width:60px;height:22px;" target="_blank" href="' + stores[i].href + '">SEARCH</a></td><td><a id="' +
             stores[i].upcAId + '" class="btn btn-second-search btn-warning btn-xs upc-link"style="width:60px;height:22px;" target="_blank" href="' + stores[i].href + '">2nd Search</a></td><td><a id="'
-            + stores[i].modelAId + '" class="btn btn-third-search btn-info btn-xs model-link"style="width:60px;height:22px;" target="_blank" href="' + stores[i].href + '">3rd Search</a></td></tr>');
+            + stores[i].modelAId + '" class="btn btn-third-search btn-info btn-xs model-link"style="width:60px;height:22px;" target="_blank" href="' + stores[i].href + '">3rd Search</a></td></tr>')($scope));
         if (stores[i].divId === 'walmart-div') {
             $('#stores-table').append('<tr style="height:34px;"><td></td><td></td><td></td><td></td></tr>');
         }

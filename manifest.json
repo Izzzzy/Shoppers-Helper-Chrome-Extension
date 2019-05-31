@@ -3,7 +3,7 @@
 
     "name": "Shopper's Helper",
     "description": "Helps USER find cheapest products online.",
-    "version": "0.0.1.4",
+    "version": "0.0.1.5",
 
     "browser_action": {
         "default_icon": "orangeicon.png",
