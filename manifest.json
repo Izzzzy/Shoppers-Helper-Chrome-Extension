@@ -13,7 +13,35 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*/*"
+              "*://*.amazon.com/*",
+              "*://*.adorama.com/*",
+              "*://*.autopartswarehouse.com/*",
+              "*://*.bedbathandbeyond.com/*",
+              "*://*.bestbuy.com/*",
+              "*://*.bhphotovideo.com/*",
+              "*://*.bloomingdales.com/*",
+              "*://*.buydig.com/*",
+              "*://*.ebay.com/*",
+              "*://*.gap.com/*",
+              "*://*.groupon.com/*",
+              "*://*.hdsupplysolutions.com/*",
+              "*://*.homedepot.com/*",
+              "*://*.jcpenney.com/*",
+              "*://*.jet.com/*",
+              "*://*.kmart.com/*",
+              "*://*.kohls.com/*",
+              "*://*.lowes.com/*",
+              "*://*.macys.com/*",
+              "*://*.newegg.com/*",
+              "*://*.officedepot.com/*",
+              "*://*.overstock.com/*",
+              "*://*.quill.com/*",
+              "*://*.sears.com/*",
+              "*://*.staples.com/*",
+              "*://*.target.com/*",
+              "*://*.techrabbit.com/*",
+              "*://*.toysrus.com/*",
+              "*://*.walmart.com/*"
             ],
             "js": [ "jquery-2.2.4.js", "allcontent.js" ],
             "run_at": "document_start"
