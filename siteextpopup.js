@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (identifiers[1] !== "undefined") {
                     //alert(identifiers[1].searchName);
                     //$('#upc-code').val(identifiers[1].searchTerm);
-                    myScope.myObjects.secondInput=identifiers[0].searchTerm;
+                    myScope.myObjects.secondInput=identifiers[1].searchTerm;
                     myScope.$apply();
                     $('#second-search-name').val(identifiers[1].searchName);
                     setUpcLinks();
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (identifiers[2] !== "undefined") {
                     //alert(identifiers[2].searchName);
                     $('#model-number').val(identifiers[2].searchTerm);
-                    myScope.myObjects.thirdInput=identifiers[0].searchTerm;
+                    myScope.myObjects.thirdInput=identifiers[2].searchTerm;
                     myScope.$apply();
                     $('#third-search-name').val(identifiers[2].searchName);
                     setModelNumberLinks();

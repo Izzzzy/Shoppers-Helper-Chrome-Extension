@@ -3,7 +3,7 @@
 
     "name": "Shopper's Helper",
     "description": "Helps USER find cheapest products online.",
-    "version": "0.0.1.6",
+    "version": "0.0.1.7",
 
     "browser_action": {
         "default_icon": "orangeicon.png",
@@ -24,20 +24,7 @@
             ],
             "js": [ "jquery-2.2.4.js", "sitecontent.js" ],
             "run_at": "document_end"
-        },
-      {
-        "matches": [
-          "*://*.amazon.com/*",
-          "*://*.bestbuy.com/*"
-        ],
-        "exclude_matches": [
-          "*://sellercentral.amazon.com/*",
-          "*://*.aws.amazon.com/*"
-        ],
-        "css": ["bootstrap-3.3.7-dist.css/css/bootstrap.min.css"],
-        "js": [ "jquery-2.2.4.js", "searchpages.js" ],
-        "run_at": "document_end"
-      }
+        }
     ],
 
     "background": {  
