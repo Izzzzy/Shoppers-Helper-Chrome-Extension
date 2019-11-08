@@ -31,22 +31,22 @@ $(function () { // setting the array of stores with the properties
         upcAId: 'upc-amazon-link',
         modelAId: 'model-number-amazon-link'
     },
-    // {
-    //     categoryClasses: 'all auto baby-toddler books cell-phones-accessories clothing computers department-stores electronics-and-office furniture-and-decor groceries health-beauty home-garden jewelry-watches kids kitchen-bath outlet photo sports-outdoors tools-hardware',
-    //     //took out
-    //     //not sure but took out
-    //     //not sure but left in
-    //     divId: 'ebay-div',
-    //     dataSearchLink: ebayLink+'%2Fsch%2Fi.html%3F_nkw%3D',
-    //     //dataSearchLink: 'http://www.ebay.com%2Fsch%2Fi.html%3F_nkw%3D',
-    //     dataAppendToSearchLink: '',
-    //     linkId: 'ebay-link',
-    //     nameForButton: 'EBAY',
-    //     href: ebayLink,
-    //     //href: 'http://www.ebay.com',
-    //     upcAId: 'upc-ebay-link',
-    //     modelAId: 'model-number-ebay-link'
-    // },
+    {
+        categoryClasses: 'all auto baby-toddler books cell-phones-accessories clothing computers department-stores electronics-and-office furniture-and-decor groceries health-beauty home-garden jewelry-watches kids kitchen-bath outlet photo sports-outdoors tools-hardware',
+        //took out
+        //not sure but took out
+        //not sure but left in
+        divId: 'ebay-div',
+        dataSearchLink: ebayLink+'%2Fsch%2Fi.html%3F_nkw%3D',
+        //dataSearchLink: 'http://www.ebay.com%2Fsch%2Fi.html%3F_nkw%3D',
+        dataAppendToSearchLink: '',
+        linkId: 'ebay-link',
+        nameForButton: 'EBAY',
+        href: ebayLink,
+        //href: 'http://www.ebay.com',
+        upcAId: 'upc-ebay-link',
+        modelAId: 'model-number-ebay-link'
+    },
     {
         categoryClasses: 'all auto baby-toddler books cell-phones-accessories clothing computers department-stores electronics-and-office furniture-and-decor groceries health-beauty home-garden jewelry-watches kids kitchen-bath outlet photo sports-outdoors tools-hardware',
         //took out

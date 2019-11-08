@@ -3,6 +3,12 @@ var identifiers = {};
 var productAndSiteInfo = {};
 //alert('hi');
 document.addEventListener('DOMContentLoaded', function () {
+    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+        var url = tabs[0].url;
+        if(url.indexOf('ebay.com') > -1){
+            $('#ebay-div').remove();
+        }
+    });
     $('#stores-big-div').height(
         $(window).height() - $('#first-part').height() - 7
     );
